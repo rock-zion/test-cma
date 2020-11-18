@@ -22,6 +22,7 @@ export const MainContainerStyle = styled.div`
     background: ${color.white};
     box-shadow: 0px 12px 34px rgba(0, 0, 0, 0.03);
     border-radius: 12px;
+    margin-bottom: 40px;
   }
 
   .btn-toggle-view{
