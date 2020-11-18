@@ -5,10 +5,9 @@ import activeListImg from '../assets/active-list.svg';
 import inactiveListImg from '../assets/inactive-list.svg';
 import activeGridImg from '../assets/active-grid.svg';
 import inactiveGridImg from '../assets/inactive-grid.svg';
-import forward from '../assets/chevron-forward.svg'
 import { connect } from 'react-redux';
 import { getUser } from '../redux/actions/getUsers';
-import { Link } from 'react-router-dom';
+import User from '../components/User'
 
 export class Index extends Component {
   state = {
@@ -71,21 +70,13 @@ export class Index extends Component {
 
           <div className={` users-container ${list ? 'users-container-list': 'users-container-grid'}`}>
             {users.map((user) => (
-              <div key={user.node_id} className={` user ${list ? 'user-list' : 'user-grid'}`}>
-                <div className={`details ${list ?'': 'details-grid'}`} >
-                  <div className='avatar-container'>
-                    <img src={user.avatar_url} alt='' />
-                  </div>
-                  <div>
-                    <p className="login">{user.login}</p>
-                    <p className="id-number">ID Number: {user.node_id}</p>
-                  </div>
-                </div>
-                <Link className={`btn btn-active ${list?'':'btn-100'}`} to=''>
-                  See more 
-                  <img src={forward} alt=""/>
-                </Link>
-              </div>
+              <User 
+                list={this.state.list}
+                grid={this.state.grid}
+                login={user.login}
+                id={user.node_id}
+                avatar={user.avatar_url}
+              />
             ))}
           </div>
         </MainContainer>
