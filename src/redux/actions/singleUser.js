@@ -1,16 +1,16 @@
 import API from './index';
 import * as Types from '../types';
 
-export const getUser = () => {
+export const singleUser = (data) => {
   return (dispatch) => {
     API({
       method: 'GET',
-      url: 'users',
+      url: `/users/${data}`
     })
       .then((res) => {
         console.log('response =>',res)
         dispatch({
-          type: Types.USERS,
+          type: Types.USER,
           payload: res.data
         })
       })

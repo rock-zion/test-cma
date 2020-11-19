@@ -3,18 +3,19 @@ import { UserDetailComponentStyle } from '../style/components';
 
 export class UserDetail extends Component {
   render() {
+    const {avatar,name,profile,following,followers} = this.props
     return <UserDetailComponentStyle>
       <div className="profile-img-container">
-        <img src="" alt=""/>
+        <img src={avatar} alt=""/>
       </div>
       <div>
         <div className="name-container">
-        <p>Abu-Ekpeshie Peter</p>
-        <a href="" target="_blank" >Visit Github</a>
+        <p>{name}</p>
+        <a href={profile} target="_blank" >Visit Github</a>
         </div>
         <div className="follow-count">
-          <p className="followers">4566 <br/> <span className="follow-label">Followers</span> </p>
-          <p className="following">4566 <br/> <span className="follow-label">Following</span></p>
+          <p className="followers">{followers} <br/> <span className="follow-label">Followers</span> </p>
+          <p className="following">{following} <br/> <span className="follow-label">Following</span></p>
         </div>
       </div>
     </UserDetailComponentStyle>;

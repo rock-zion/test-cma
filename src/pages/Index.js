@@ -71,11 +71,13 @@ export class Index extends Component {
           <div className={` users-container ${list ? 'users-container-list': 'users-container-grid'}`}>
             {users.map((user) => (
               <User 
+                key={user.node_id}
                 list={this.state.list}
                 grid={this.state.grid}
                 login={user.login}
                 id={user.node_id}
                 avatar={user.avatar_url}
+                url={user.url}
               />
             ))}
           </div>

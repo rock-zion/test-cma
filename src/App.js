@@ -8,7 +8,10 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={Index} />
-        <Route path='/user/:login' component={UserDetails} />
+        {/* <Route path='/user/:login' component={UserDetails} /> */}
+        <Route path='/user/:login' render={(props) => (
+          <UserDetails {...props} />
+        )}/>
       </Switch>
     </Router>
   );

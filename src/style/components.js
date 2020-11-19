@@ -115,8 +115,7 @@ export const UserStyle = styled.span`
 `;
 
 export const UserDetailComponentStyle = styled.div`
-  min-width: 297px;
-  max-width: fit-content;
+  width: fit-content;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 24px;
   height: fit-content;
@@ -161,10 +160,14 @@ export const UserDetailComponentStyle = styled.div`
   .followers{
     margin-right: 32px;
   }
+
+  @media only screen and (max-width: 600px){
+    width: 100%;
+    height: fit-content;
+  }
 `;
 
 export const MoreInfoStyle = styled.div`
-  flex: 1;
   height: fit-content;
   background-color: ${color.white};
   padding: 24px;
@@ -177,6 +180,7 @@ export const MoreInfoStyle = styled.div`
     overflow: hidden;
     border-radius: 100%;
     margin-right: 9.32px;
+    margin-bottom: 16px;
 
     img{
       width: 100%;
@@ -198,6 +202,9 @@ export const MoreInfoStyle = styled.div`
     font-size: 10px;
   }
 
-
+  @media only screen and (max-width: 600px){
+    width: 100%;
+    flex-direction: column;
+  }
   
 `
