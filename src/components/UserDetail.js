@@ -11,7 +11,7 @@ export class UserDetail extends Component {
       <div>
         <div className="name-container">
         <p>{name}</p>
-        <a href={profile} target="_blank" >Visit Github</a>
+        <a href={profile} rel="noreferrer" target="_blank" >Visit Github</a>
         </div>
         <div className="follow-count">
           <p className="followers">{followers} <br/> <span className="follow-label">Followers</span> </p>
