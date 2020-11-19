@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import logo from '../assets/x.png';
-import * as color from './color.json';
 
 export const HomeStyle = styled.div`
   padding: 64px;

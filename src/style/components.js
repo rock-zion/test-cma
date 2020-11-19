@@ -108,9 +108,96 @@ export const UserStyle = styled.span`
       margin-bottom: 16px;
     }
 
-    .btn-m-100{
+    .btn-m-100 {
       width: 100%;
     }
-
   }
 `;
+
+export const UserDetailComponentStyle = styled.div`
+  min-width: 297px;
+  max-width: fit-content;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 24px;
+  height: fit-content;
+  border: 1px solid ${color.white};
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+
+  display: flex;
+
+  .profile-img-container{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 9.32px;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .name-container{
+    margin-bottom: 24px;
+  }
+
+  .follow-count{
+    display: flex;
+    p{
+      line-height: 100%;
+      color: ${color.black};
+      font-weight: 500;
+    }
+  }
+
+  .follow-label{
+    font-size: 12px;
+    color: ${color.grey};
+    font-weight: 300;
+  }
+
+  .followers{
+    margin-right: 32px;
+  }
+`;
+
+export const MoreInfoStyle = styled.div`
+  flex: 1;
+  height: fit-content;
+  background-color: ${color.white};
+  padding: 24px;
+  border-radius: 0.5rem;
+  display: flex;
+
+  .profile-img-container{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 9.32px;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .label{
+    font-size: 12px;
+    font-weight: 300px;
+    margin-top: 26px;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  .sub-text{
+    font-size: 10px;
+  }
+
+
+  
+`

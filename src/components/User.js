@@ -17,7 +17,7 @@ const User = (props) => {
             <p className='id-number'>ID Number: {id}</p>
           </div>
         </div>
-        <Link className={`btn btn-active ${list ? 'btn-m-100' : 'btn-100'}`} to=''>
+        <Link className={`btn btn-active ${list ? 'btn-m-100' : 'btn-100'}`} to={`/user/${login}`}>
           See more
           <img src={forward} alt='' />
         </Link>
